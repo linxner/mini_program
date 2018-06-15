@@ -3,13 +3,14 @@
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/sign/sign"
   ],
   "window": {
-    "backgroundTextStyle": "ligth",
-    "navigationBarBackgroundColor": "#432423",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "首页"
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#fff"
   },
   "tabBar": {
     "selectedColor": "#11cd6e",

@@ -1,1 +1,27 @@
-<input placeholder="输入手机号"></input>
+<view class='wrapper'>
+  <view class='bg-img'>
+    <image src='../images/1.jpg' class='img'></image>
+  </view>
+  <view class='btn'>
+    <button type="primary" size="default" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="primary"> 微信用户一键登录 </button>
+    <view class='sign-up' bindtap="login">手机号码登录/注册</view>
+  </view>
+  <view class='cover-bg' wx:if="{{loginShow}}">
+    <view class='cover'>
+      <view class='success' wx:if="{{!failed}}">
+        <view class='title'>微信授权登录</view>
+        <view class='title-img'></view>
+        <view class='login-tips'>
+          允许获得头像、昵称</view>
+        <!-- 需要使用 button 来授权登录 -->
+        <view class='confirm'>
+          <view class='refuse' bindtap='refuse'>拒绝</view>
+          <view class='conf' bindtap='confirm'>允许</view>
+          <!-- <button>拒绝</button> -->
+        </view>
+      </view>
+      <view class='failed' wx:if="{{failed}}">
+        授权失败</view>
+    </view>
+  </view>
+</view>

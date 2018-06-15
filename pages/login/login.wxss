@@ -1,0 +1,119 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-img {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 90%;
+  margin-top: 100px;
+}
+
+.sign-up {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: skyblue;
+}
+
+.cover-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover {
+  background-color: #fff;
+  width: 80%;
+  margin: 200px auto;
+  border-radius: 5px;
+  animation: show 1s ease;
+}
+
+.title {
+  width: 100%;
+  line-height: 2.5;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.title-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: url("http://wx.qlogo.cn/mmopen/vi_32/ASgUMhoyLPoDicNB6cDwgY0qicd7St1ZWWJEKwlKSBagJrmUesJsWqCFxwS5vmAkicX00FQHIFlKOvrGD7hyG0PVw/132") no-repeat;
+  background-size: 100%;
+  margin: 20px 0 10rpx;
+}
+
+.login-tips {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.login-tips::before {
+  content: '·';
+  font-weight: 600;
+}
+
+.confirm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  line-height: 2.5;
+}
+
+.conf {
+  width: 50%;
+  text-align: center;
+  color: #11cd6e;
+}
+
+.refuse {
+  width: 50%;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.success {
+  background-color: #fff;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: show 1s ease;
+}
+
+.failed {
+  width: 100%;
+  text-align: center;
+  line-height: 200px;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
