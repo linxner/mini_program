@@ -1,55 +1,20 @@
+// pages/welcome/welcome.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    loginShow: false,
-    failed: false
+
   },
-  primary: function() {
-    this.setData({
-      loginShow: true
-    })
-  },
-  confirm() {
-    this.setData({
-      loginShow: false
-    })
-    wx.getUserInfo({
-      success(e) {
-        console.log(e)
-      }
-    })
-    wx.switchTab({
-      url: '../index/index',
-    })
-  },
-  login() {
-    wx.navigateTo({
-      url: '../sign/sign',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-  },
-  refuse() {
-    this.setData({
-      failed: true
-    })
-    setTimeout(() => {
-      this.setData({
-        loginShow: false,
-        failed: false
-      })
-    }, 2000)
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function() {
-    
+  onLoad: function(options) {
+
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -61,7 +26,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    setTimeout(() => {
+      wx.switchTab({
+        url: '../index/index',
+      }, 3000)
+    })
   },
 
   /**

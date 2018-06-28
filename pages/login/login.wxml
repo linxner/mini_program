@@ -21,7 +21,9 @@
         </view>
       </view>
       <view class='failed' wx:if="{{failed}}">
-        授权失败</view>
+        <icon type="warn" size='18' color='orange'/>
+        <text> 授权失败</text>
+      </view>
     </view>
   </view>
 </view>

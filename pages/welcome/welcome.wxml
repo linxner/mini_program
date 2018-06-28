@@ -1,0 +1,4 @@
+<view class='welcome'>
+  <view class='word'>Welcome</view>
+  <view wx:for="{{[1,2,3]}}" class='dot'></view>
+</view>
