@@ -1,0 +1,61 @@
+.scroll {
+  width: 100%;
+}
+
+.new-title {
+  margin: 10px 0;
+  padding: 0 15px;
+  border-left: 5px solid #1aad19;
+  font-size: 16px;
+}
+
+.new-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  word-wrap: nowrap;
+  padding: 0 20px;
+}
+
+.movies-name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.new-movies {
+  margin-right: 20px;
+}
+
+.new-movies .new-movies-img {
+  max-width: 100px;
+  max-height: 138px;
+  margin-bottom: 6px;
+}
+
+.rating {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  color: darkorange;
+}
+
+.star-rating {
+  width: 70%;
+  height: 11px;
+  background: url("https://img3.doubanio.com/f/shire/b8f4c3672ef81106701071831e22422a745d3b74/pics/rating_icons/ic_rating_s.png") no-repeat 0 -22px;
+}
+
+.back {
+  width: 100px;
+  height: 100px;
+  background: url("http://img7.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg") no-repeat;
+}

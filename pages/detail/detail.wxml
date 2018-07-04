@@ -1,0 +1,40 @@
+<view class='contain'>
+  <view class='detail-banner'>
+    <view class='cover'>
+      <view class='detail-dec'>
+        <image src="{{detail.coverUrl}}" class='detail-img'></image>
+        <view class='dec'>
+          <view class='title'>{{detail.title}}</view>
+          <view>{{detail.titleAliases[0]}}</view>
+          <view class='dec-bottom'>
+            <text class='rating'>{{detail.rating}}</text>
+            <view>
+              <view class='star-rating'></view>
+              <text class='rating-count'>{{detail.ratingCount}}人评价</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='description'>
+    <text>{{detail.durationMin}}分钟 {{detail.genres[0]}}/{{detail.genres[1]}}</text>
+    <view>{{detail.releaseDates[0]}}上映 {{detail.countries[0]}}</view>
+    <text>{{detail.directors[0].name}}(导演)</text>
+    <text wx:for="{{detail.actors}}" wx:key="{{item.id}}"> / {{item.name}}</text>
+  </view>
+
+  <view class='btns'>
+    <button class='btn want' plain='true' style='color:darkorange;border-color:darkorange;'>想看</button>
+    <button class='btn watched' plain='true' style='color:darkorange;border-color:darkorange;'>看过</button>
+  </view>
+  <view class='dec-detail'>
+    <view class='dec-title'>
+      {{detail.title}}剧情简介
+    </view>
+    <text>{{detail.description}}</text>
+  </view>
+  <view class='comment'>
+    <view class='dec-title'>短评</view>
+  </view>
+</view>

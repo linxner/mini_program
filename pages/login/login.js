@@ -18,11 +18,11 @@ Page({
     })
     wx.getUserInfo({
       success(e) {
-        console.log(e)
+        wx.setStorageSync('userInfo', e)
       }
     })
     wx.switchTab({
-      url: '../index/index',
+      url: '../user/user',
     })
   },
   login() {
@@ -48,7 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function() {
-    
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

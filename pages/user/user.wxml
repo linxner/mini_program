@@ -1,1 +1,18 @@
-<view></view>
+<!-- 用户中心 -->
+
+
+
+<view class='wrapper'>
+  <view class='userinfo'>
+    <image src="{{userInfo.userInfo.avatarUrl}}" class='img'></image>
+    <view class='userid'>{{userInfo?userInfo.userInfo.nickName:"登录/注册"}}</view>
+  </view>
+  <view class='want'>
+    <text>想看（0）</text>
+    <view class='dec'>该用户暂无想看电影</view>
+  </view>
+  <view class='watched'>
+    <text>看过（0）</text>
+    <view class='dec'>该用户暂无看过电影</view>
+  </view>
+</view>

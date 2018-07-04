@@ -27,7 +27,5 @@ App({
   onError: function(msg) {
 
   },
-  appData: {
-    userInfo: null
-  }
+
 })

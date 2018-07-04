@@ -1,4 +1,4 @@
-<view class='welcome'>
+<view class='welcome' wx:if="{{hideWel}}">
   <view class='word'>Welcome</view>
-  <view wx:for="{{[1,2,3]}}" class='dot'></view>
+  <!-- <view wx:for="{{[1,2,3]}}" class='dot'></view> -->
 </view>

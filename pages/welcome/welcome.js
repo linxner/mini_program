@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hideWel: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    setTimeout(() => {
+      this.setData({
+        hideWel: false
+      })
+    },2000)
   },
 
   /**
@@ -26,11 +30,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    setTimeout(() => {
-      wx.switchTab({
-        url: '../index/index',
-      }, 3000)
-    })
+
   },
 
   /**

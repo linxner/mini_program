@@ -1,17 +1,17 @@
 {
   "pages": [
-    "pages/welcome/welcome",
+    "pages/detail/detail",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/user/user",
     "pages/login/login",
-    "pages/sign/sign"
+    "pages/sign/sign",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "首页",
-    "navigationBarBackgroundColor": "#fff"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "电影·豆瓣",
+    "navigationBarBackgroundColor": "#1aad19"
   },
   "tabBar": {
     "selectedColor": "#11cd6e",

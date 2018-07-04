@@ -1,45 +1,40 @@
+const newest = require("../../utils/api.js");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-  go() {
-    // wx.login({
-    //   success(e) {
-    //     console.log(e)
-    //   }
-    // })
-    // wx.checkSession({
-    //   success(e){
-    //     console.log(e)
-    //   }
-    // })
-    wx.getSetting({
-      success(res) {
-        res.authSetting = {
-          "scope.userInfo": true,
-          "scope.userLocation": true
-        }
-      }
-    })
-    wx.authorize({
-      scope: 'userInfo',
-      success(res){
-        console.log(res)
-      }
-    })
-    // wx.openSetting({
-
-    // })
+    api: [],
+    hot: [],
+    episode: []
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-
+  onLoad: function() {
+    wx.request({
+      url: 'http://120.76.205.241:8000/movie/douban?catid=%E7%94%B5%E5%BD%B1&get_all_actor=1&sort=T&detail_awards=1&apikey=eftGXFi8mzKdoA4EKMhWu7IjthNeIuRUrerH7c57ZzC29oufLpfexmNcV4Hzx2DW',
+      success(res) {
+        wx.setStorageSync('hot', res.data.data)
+      },
+      complete() {
+        wx.request({
+          url: 'http://120.76.205.241:8000/movie/douban?catid=%E7%94%B5%E8%A7%86%E5%89%A7&sort=T&get_all_actor=1&detail_awards=1&apikey=eftGXFi8mzKdoA4EKMhWu7IjthNeIuRUrerH7c57ZzC29oufLpfexmNcV4Hzx2DW',
+          success(res) {
+            wx.setStorageSync("episode", res.data.data)
+          }
+        })
+      }
+    })
+    const hot = wx.getStorageSync('hot')
+    const episode = wx.getStorageSync('episode')
+    this.setData({
+      api: newest.api,
+      hot: hot,
+      episode: episode
+    })
   },
 
   /**

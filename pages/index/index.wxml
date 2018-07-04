@@ -1,1 +1,52 @@
- <button open-type="getUserInfo" bindtap="go">登录</button>
+<view>
+  <view class='new-title'>正在热映</view>
+  <scroll-view scroll-x="true" class='scroll'>
+    <view class='new-list'>
+      <view wx:for="{{api}}" wx:key="{{item}}" class='new-movies'>
+        <navigator url='../detail/detail?id={{item.id}}&name=api&index={{index}}'>
+          <image src="{{item.imgUrl}}" class='new-movies-img'></image>
+        </navigator>
+        <text class='movies-name'>{{item.name}}</text>
+        <view class='rating'>
+          <view class='star-rating'></view>
+          <text>{{item.rating}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view>
+  <view class='new-title'>热门电影</view>
+  <scroll-view scroll-x="true" class='scroll'>
+    <view class='new-list'>
+      <view wx:for="{{hot}}" wx:key="{{item}}" class='new-movies'>
+        <navigator url='../detail/detail?id={{item.id}}&name=hot&index={{index}}'>
+          <image src="{{item.coverUrl}}" class='new-movies-img'></image>
+        </navigator>
+        <text class='movies-name'>{{item.title}}</text>
+        <view class='rating'>
+          <view class='star-rating'></view>
+          <text>{{item.rating}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view>
+  <view class='new-title'>热门电视剧</view>
+  <scroll-view scroll-x="true" class='scroll'>
+    <view class='new-list'>
+      <view wx:for="{{episode}}" wx:key="{{item}}" class='new-movies'>
+        <navigator url='../detail/detail?id={{item.id}}&name=episode&index={{index}}'>
+          <image src="{{item.coverUrl}}" class='new-movies-img'></image>
+        </navigator>
+        <text class='movies-name'>{{item.title}}</text>
+        <view class='rating'>
+          <view class='star-rating'></view>
+          <text>{{item.rating}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
