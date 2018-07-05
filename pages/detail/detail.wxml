@@ -1,15 +1,15 @@
 <view class='contain'>
-  <view class='detail-banner'>
+  <view class='detail-banner' style="background-image: url('{{detail.coverUrl}}');">
     <view class='cover'>
       <view class='detail-dec'>
         <image src="{{detail.coverUrl}}" class='detail-img'></image>
         <view class='dec'>
           <view class='title'>{{detail.title}}</view>
-          <view>{{detail.titleAliases[0]}}</view>
+          <view class='en-name'>{{detail.titleAliases[0]}}</view>
           <view class='dec-bottom'>
             <text class='rating'>{{detail.rating}}</text>
             <view>
-              <view class='star-rating'></view>
+              <view class='star-rating' style='background-position-y:-{{rating}}px'></view>
               <text class='rating-count'>{{detail.ratingCount}}人评价</text>
             </view>
           </view>
@@ -35,6 +35,22 @@
     <text>{{detail.description}}</text>
   </view>
   <view class='comment'>
-    <view class='dec-title'>短评</view>
+    <view class='dec-title'>
+      <text>短评</text>
+      <text>({{}})</text>
+    </view>
+    <view class='comment-list' wx:for="{{comment}}" wx:key="{{item.id}}">
+      <view class='comment-title'>
+        <image class='comment-img' src='{{item.imageUrls}}' style="background-image:url('../images/avater.png')"></image>
+        <view style='width:100%'>
+          <view class='comment-title-top'>
+            <view class='commentor'>{{item.commenterScreenName}}</view>
+            <view class='comment-star'></view>
+          </view>
+          <view class='date'>{{item.publishDateStr}}</view>
+          <view class='comment-content'>{{item.content}}</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
